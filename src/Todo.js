@@ -61,13 +61,23 @@ const Todo = () => {
      }  
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <input
+      {
+          dark?<input
+          className="input"
+          placeholder="Enter you Task"
+          onChange={(e) => setNewTask(e.target.value)}
+          onKeyDown={onKeyDownHandler}
+          type="text"
+          style={{backgroundColor:'black', color:'white'}}
+        />:<input
           className="input"
           placeholder="Enter you Task"
           onChange={(e) => setNewTask(e.target.value)}
           onKeyDown={onKeyDownHandler}
           type="text"
         />
+        }
+        
         <ul className="todolist" >
         {tasks.map((task, index) => (
           <li key={index} style={{listStyle:'none'}}>
@@ -109,13 +119,23 @@ const Todo = () => {
      }  
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <input
+        {
+          dark?<input
+          className="input"
+          placeholder="Enter you Task"
+          onChange={(e) => setNewTask(e.target.value)}
+          onKeyDown={onKeyDownHandler}
+          type="text"
+          style={{backgroundColor:'black'}}
+        />:<input
           className="input"
           placeholder="Enter you Task"
           onChange={(e) => setNewTask(e.target.value)}
           onKeyDown={onKeyDownHandler}
           type="text"
         />
+        }
+        
         <ul className="todolist" >
         {tasks.map((task, index) => (
           <li key={index} style={{listStyle:'none'}}>
