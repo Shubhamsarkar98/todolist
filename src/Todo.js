@@ -179,7 +179,9 @@ const Todo = () => {
       </div>
     </div>
     }
-   
+   <div style={{display:'flex', justifyContent:'center',backgroundColor:'white',border:'2px solid black',width:'400px'}}>
+    <span>All</span><span>Active</span><span>completed</span>
+   </div>
     </>
     
   );
