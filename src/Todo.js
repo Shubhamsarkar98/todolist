@@ -179,9 +179,14 @@ const Todo = () => {
       </div>
     </div>
     }
-   <div style={{display:'flex', justifyContent:'center',backgroundColor:'white',border:'2px solid black',width:'400px'}}>
-    <span>All</span><span>Active</span><span>completed</span>
+    {
+      dark? <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
+      <span>All</span><span>Active</span><span>completed</span><span>Clear All</span>
+     </div>: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
+    <span>All</span><span>Active</span><span>completed</span><span>Clear All</span>
    </div>
+    }
+  
     </>
     
   );
