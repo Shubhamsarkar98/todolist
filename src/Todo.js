@@ -45,7 +45,7 @@ const Todo = () => {
       <header>
      
        {
-        dark?<img src={image1} width="100%" />:<img src={image2} width="100%" />
+        dark?<img src={image1} width="100%"  className="mobilemoon"/>:<img src={image2} width="100%" className="mobilesun" />
        } 
         
       </header>
@@ -78,7 +78,25 @@ const Todo = () => {
         />
         }
         
-        <ul className="todolist" >
+        {
+          dark?  <ul className="todolist"  style={{backgroundColor:'black',color:'white'}}>
+          {tasks.map((task, index) => (
+            <li key={index} style={{listStyle:'none'}}>
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => completeTask(index)}
+              />
+             
+              
+              <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }} >
+                {task.text}
+              </span>
+              <button onClick={() => deleteTask(index)}  className="del">X</button>
+              
+            </li>
+          ))}
+        </ul>:  <ul className="todolist" >
         {tasks.map((task, index) => (
           <li key={index} style={{listStyle:'none'}}>
             <input
@@ -96,6 +114,8 @@ const Todo = () => {
           </li>
         ))}
       </ul>
+        }
+      
 
       </div>
       </div>
@@ -103,7 +123,7 @@ const Todo = () => {
       <header>
      
        {
-        dark?<img src={image1} width="100%" />:<img src={image2} width="100%" />
+        dark?<img src={image1} width="100%"  className="mobilemoon"/>:<img src={image2} width="100%" className="mobilesun" />
        } 
         
       </header>

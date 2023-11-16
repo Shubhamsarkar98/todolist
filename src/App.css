@@ -3,7 +3,7 @@
   top: 30%;
   left: 45%;
   width: 220px;
-  height: 20px;
+  height: 30px;
 }
 .todoname{
   position: absolute;
@@ -39,7 +39,32 @@
 
 
 @media screen and (max-width: 800px) {
-  .left, .main, .right {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  .mobilemoon{
+    background-image: url('./images/bg-mobile-light.jpg');
+    height: 300px;
+  }
+  .input{
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    width: 220px;
+    height: 30px;
+  }
+  .mobilesun{
+    background-image: url('./images/bg-mobile-dark.jpg');
+    height: 300px;
+  }
+  .todolist{
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  background-color: white;
+  width: 200px;
+  }
+  .del{
+    margin-left: 10px;
+    
+    border: none;
+    
   }
 }
