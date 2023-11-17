@@ -189,10 +189,10 @@ const Todo = () => {
     </div>
     }
     {
-      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
-      <span className="all" onClick={checkall}>All</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
+      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid black',width:'400px',marginLeft:'620px', marginTop:'100px'}}>
+      <span className="all" onClick={checkall}>All {tasks.length} left item </span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
      </div>: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
-    <span className="all"  onClick={checkall}>All</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
+    <span className="all"  onClick={checkall}>All {tasks.length} left Iteam</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
    </div>
     }
   
