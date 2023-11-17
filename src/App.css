@@ -71,5 +71,11 @@
     border: none;
     
   }
+  .main{
+    margin-left: 10px;
+  }
+  .demon{
+    margin-right: -120px;
+  }
 
 }

@@ -129,7 +129,7 @@ const Todo = () => {
 
       </div>
       {
-      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid white',width:'400px',marginLeft:'620px', marginTop:'100px', color:'white'}}>
+      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid white',width:'400px',marginLeft:'620px', marginTop:'100px', color:'white'}} >
       <span className="all" onClick={checkall}>All {tasks.length} left item </span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
      </div>: null
     }
@@ -196,7 +196,7 @@ const Todo = () => {
     </div>
     }
     {
-      dark? null: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
+      dark? null: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}} className="demon">
     <span className="all"  onClick={checkall}>All {tasks.length} left item</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
    </div>
     }
