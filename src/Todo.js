@@ -8,7 +8,7 @@ const Todo = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [dark, setdark] = useState(false)
-
+  const [arr, setarr] = useState([])
 
 
   const darkmode=()=>{
@@ -26,6 +26,8 @@ const Todo = () => {
       setNewTask("");
     }
   };
+
+  
 
   const completeTask = (index) => {
     const updatedTasks = [...tasks];
@@ -126,6 +128,11 @@ const Todo = () => {
       
 
       </div>
+      {
+      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid white',width:'400px',marginLeft:'620px', marginTop:'100px', color:'white'}}>
+      <span className="all" onClick={checkall}>All {tasks.length} left item </span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
+     </div>: null
+    }
       </div>
     </div>: <div>
       <header>
@@ -189,9 +196,7 @@ const Todo = () => {
     </div>
     }
     {
-      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid black',width:'400px',marginLeft:'620px', marginTop:'100px'}}>
-      <span className="all" onClick={checkall}>All {tasks.length} left item </span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
-     </div>: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
+      dark? null: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
     <span className="all"  onClick={checkall}>All {tasks.length} left item</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
    </div>
     }
