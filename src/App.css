@@ -92,6 +92,10 @@
     left: 40%;
     padding: 10px;
   }
+  .del{
+    display: absolute;
+    left: 70%;
+  }
 
 }
 

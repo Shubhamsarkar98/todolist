@@ -42,10 +42,19 @@ const Todo = () => {
   };
   const checkall=()=>{
    let check=document.getElementsByName('alltask')
+   
    let checklen=check.length
    for(var x=0;x<checklen;x++){
     check[x].checked=true;
    }
+  }
+  const darkall=()=>{
+    let check=document.getElementsByName('darkall')
+    let checkleen=check.length
+    for(var x=0;x<checkleen;x++){
+      check[x].checked=true
+    }
+
   }
   return (
     <>
@@ -94,6 +103,7 @@ const Todo = () => {
               <input
                 type="checkbox"
                 checked={task.completed}
+                name="alltask"
                 onChange={() => completeTask(index)}
               />
              
@@ -111,7 +121,7 @@ const Todo = () => {
             <input
               type="checkbox"
               checked={task.completed}
-              name="alltask"
+               name="alltask"
               onChange={() => completeTask(index)}
             />
            
@@ -129,7 +139,7 @@ const Todo = () => {
 
       </div>
       {
-      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid white',width:'400px', color:'white'}} >
+      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid white',width:'400px', color:'white'}}  >
       <span className="all" onClick={checkall}>All {tasks.length} left item </span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
      </div>: null
     }
