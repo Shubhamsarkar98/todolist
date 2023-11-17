@@ -74,8 +74,24 @@
   .main{
     margin-left: 10px;
   }
+  
+
+}
+
+
+@media screen and (min-width: 1089px) {
   .demon{
-    margin-right: -120px;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    padding: 10px;
+  }
+  .main{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    padding: 10px;
   }
 
 }
+
