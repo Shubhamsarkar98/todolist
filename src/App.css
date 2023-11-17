@@ -36,8 +36,13 @@
   display: absolute;
   top: 20px;
 }
+.clear{
+  padding-right: 10px;
+}
 
-
+.all{
+  padding-left: 12px;
+}
 @media screen and (max-width: 800px) {
   .mobilemoon{
     background-image: url('./images/bg-mobile-light.jpg');

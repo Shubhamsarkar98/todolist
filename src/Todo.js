@@ -38,6 +38,13 @@ const Todo = () => {
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
   };
+  const checkall=()=>{
+   let check=document.getElementsByName('alltask')
+   let checklen=check.length
+   for(var x=0;x<checklen;x++){
+    check[x].checked=true;
+   }
+  }
   return (
     <>
     {
@@ -102,6 +109,7 @@ const Todo = () => {
             <input
               type="checkbox"
               checked={task.completed}
+              name="alltask"
               onChange={() => completeTask(index)}
             />
            
@@ -162,6 +170,7 @@ const Todo = () => {
             <input
               type="checkbox"
               checked={task.completed}
+              name="alltask"
               onChange={() => completeTask(index)}
             />
            
@@ -180,10 +189,10 @@ const Todo = () => {
     </div>
     }
     {
-      dark? <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
-      <span>All</span><span>Active</span><span>completed</span><span>Clear All</span>
+      dark? <div className="main" style={{display:'flex', justifyContent:'space-between',backgroundColor:'black',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
+      <span className="all" onClick={checkall}>All</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
      </div>: <div style={{display:'flex', justifyContent:'space-between',backgroundColor:'white',border:'2px solid black',width:'400px',marginLeft:'620px'}}>
-    <span>All</span><span>Active</span><span>completed</span><span>Clear All</span>
+    <span className="all"  onClick={checkall}>All</span><span>Active</span><span>Completed</span><span className="clear">Clear All</span>
    </div>
     }
   
